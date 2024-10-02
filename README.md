@@ -1,34 +1,20 @@
-# Análise de Dados PNAD-COVID19
+# Análise do Comportamento da População durante a Pandemia de COVID-19
 
-Este projeto faz parte de um estudo aprofundado sobre o comportamento da população brasileira durante a pandemia de COVID-19, utilizando a base de dados PNAD-COVID19 do IBGE. O objetivo principal é fornecer insights estratégicos que auxiliem na preparação e resposta de instituições de saúde, como o **Hospital Hospitalize-se**, para possíveis novos surtos de COVID-19.
+Este projeto foi realizado em parceria com o Hospital Hospitalize-se, que buscava entender melhor o impacto da pandemia de COVID-19 na população brasileira, visando melhorar a gestão de recursos em possíveis novos surtos. A análise se baseou na PNAD-COVID19, uma base de dados fornecida pelo IBGE, abrangendo os dados de setembro a novembro de 2020.
 
-## Tecnologias Utilizadas
-- **Python**: para análise de dados e construção de modelos de machine learning.
-- **Power BI**: criação de dashboards interativos.
-- **Google BigQuery**: para armazenamento e processamento escalável de dados.
+## Objetivo
+A principal meta foi identificar padrões de comportamento e sintomas prevalentes em diferentes faixas etárias, além de explorar a relação entre doenças crônicas e complicações como internações e intubação. Com essas informações, a consultoria propôs recomendações estratégicas para o planejamento de estoques de medicamentos e alocação de equipes médicas.
 
 ## Etapas do Projeto
+1. **Análise Exploratória de Dados (EDA):** Identificação de características gerais da população e prevalência de sintomas.
+2. **Análise de Cluster (K-means):** Aplicação de MCA (Multiple Correspondence Analysis) e agrupamento de clusters para identificar padrões de sintomas.
+3. **Correlação de Variáveis:** Análise das correlações entre sintomas e presença de comorbidades, internações e complicações.
+4. **Análise Geográfica:** Mapeamento da distribuição de casos positivos por estado e identificação de áreas de maior impacto.
 
-### 1. Preparação dos Dados
-- **Base de Dados**: Utilização da base de dados PNAD-COVID19 disponibilizada pelo IBGE no BigQuery.
-- **Filtragem**: Foco nos casos positivos para COVID-19.
-- **Transformação de Variáveis Categóricas**: As variáveis categóricas foram convertidas em variáveis binárias para simplificar as análises.
-
-### 2. Análise Exploratória de Dados (EDA)
-- **Correlação**: Análise das correlações entre sintomas, comorbidades e gravidade da doença (internação e intubação). A análise revelou correlações moderadas entre sintomas comuns, como dor de garganta e tosse, além da relação entre comorbidades e a intensificação dos sintomas.
-- **Distribuição Etária**: Identificação de grupos de risco com base na faixa etária, onde idosos apresentaram maior incidência de internação e intubação.
-
-### 3. Análise de Cluster (K-means)
-- **MCA (Análise de Componentes Múltiplos)**: Redução da dimensionalidade para identificar as variáveis mais relevantes na variação dos sintomas.
-- **Definição de Clusters**: Utilizando os métodos elbow e silhouette, identificamos 15 clusters que agrupam indivíduos com base em características e sintomas relevantes.
-- **Remoção de Outliers**: Pontos atípicos foram identificados e removidos para garantir uma melhor qualidade dos clusters.
-
-### 4. Resultados e Insights
-- **Identificação de Sintomas Relevantes**: Os sintomas mais frequentes e significativos para casos positivos de COVID-19 incluem febre, tosse, fadiga, perda de olfato e paladar.
-- **Indicadores de Gestão**: Os insights extraídos servem como base para otimizar o planejamento de recursos, como medicamentos e equipe médica, em futuras emergências de saúde pública.
-
-### 5. Visualização de Dados
-- **Dashboard Power BI**: Criação de visualizações interativas para explorar a distribuição de sintomas, faixa etária e comorbidades, facilitando a compreensão dos dados por stakeholders.
-
-## Conclusão
-O estudo demonstrou a importância de utilizar técnicas avançadas de análise de dados para compreender o impacto da COVID-19 e preparar instituições de saúde para responder de maneira eficiente a futuros surtos. A análise de clusters e correlações fornece subsídios importantes para o planejamento estratégico de alocação de recursos médicos e testagem.
+## Tecnologias Utilizadas
+- **Python:** Para análise de dados, tratamento de dados categóricos e execução de algoritmos de Machine Learning (K-means).
+- **Power BI:** Criação de dashboards interativos para visualização de dados.
+- **BigQuery (Google Cloud):** Acesso e manipulação da base de dados em nuvem.
+  
+## Resultados
+Foram identificados os sintomas mais relevantes para casos de COVID-19, especialmente em populações mais vulneráveis, como pessoas com doenças crônicas e de idade avançada. A análise de cluster permitiu segmentar grupos com características similares, auxiliando no planejamento de recursos hospitalares e na priorização de atendimentos.
